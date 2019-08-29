@@ -1,13 +1,56 @@
 # svelte-diagrams
 
-### Svelte component to create beautiful diagrams and compile them into native code
+### Svelte components to create beautiful diagrams and compile them into native code
 
-## Credits
+[![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
+[![license](https://img.shields.io/github/license/exybore/svelte-diagrams)](#-license)
+[![version](https://img.shields.io/npm/v/svelte-diagrams)](https://www.npmjs.com/package/svelte-diagrams?activeTab=versions)
+[![code size on github](https://img.shields.io/github/languages/code-size/exybore/svelte-diagrams)](https://github.com/exybore/svelte-diagrams)
+
+## 📦 Packages
+
+This repository is made of multiple packages, and are all located under the `packages` directory.
+
+- `svelte-diagrams` : this is the main package, which contains all the library
+- `testing` : this is the testing application for the library
+
+## 💻 Developing
+
+Make sure you have [node.js 10 or later](https://nodejs.org), and [lerna](https://github.com/lerna/lerna).
+
+First of all, install all the required dependencies :
+
+```bash
+npm install   # Using NPM
+yarn install  # Using Yarn
+```
+
+Then, bootstrap the dependencies using lerna :
+
+```bash
+lerna bootstrap
+```
+
+To build the library, go into its folder and run the `build` script :
+
+```bash
+npm run build  # Using NPM
+yarn build     # Using Yarn
+```
+
+To run the testing app with live reload, go into its folder and run the `dev` script :
+
+```bash
+npm run dev  # Using NPM
+yarn dev     # Using Yarn
+```
+
+## 📜 Credits
 
 - Framework : [Svelte](https://svelte.dev)
 - Maintainer : [Exybore](https://github.com/exybore)
 
-## License
+## 🔐 License
 
 MIT License
 

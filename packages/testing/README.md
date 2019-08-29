@@ -1,1 +1,0 @@
-# Svelte diagrams - Test app
