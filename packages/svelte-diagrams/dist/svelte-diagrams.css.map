@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "file": "svelte-diagrams.css",
+  "sources": [
+    "..\\src\\components\\PieChart.svelte"
+  ],
+  "sourcesContent": [
+    "<script>\r\n  export let data = []\r\n  export let legends = []\r\n  export let size = '150px'\r\n  export let style = ''\r\n\r\n  let total = 0\r\n  let step = 0\r\n  style += 'background: conic-gradient('\r\n\r\n  data.forEach(function (piece) {\r\n    total += piece\r\n  })\r\n  data.forEach(function(piece, index) {\r\n    style += `${legends[index]['color']} ${step}deg `\r\n    step += (piece/total)*360\r\n    style += `${step}deg,`\r\n  })\r\n  style = style.slice(0, -1) + ');'\r\n\r\n  style += `width: ${size}; height: ${size};`\r\n</script>\r\n\r\n<style>\r\n  .diagram.pie-chart {\r\n    border-radius: 50%;\r\n  }\r\n</style>\r\n\r\n<div class=\"diagram pie-chart\" {style}>\r\n\r\n</div>"
+  ],
+  "names": [],
+  "mappings": "AAwBE,QAAQ,UAAU,cAAC,CAAC,AAClB,aAAa,CAAE,GAAG,AACpB,CAAC"
+}
