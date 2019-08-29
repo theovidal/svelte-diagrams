@@ -298,7 +298,7 @@ styleInject(css);
 const file = "src\\App.svelte";
 
 function create_fragment(ctx) {
-	var h1, t_1, current;
+	var h1, t1, h2, t3, current;
 
 	var piechart = new svelteDiagrams_1({
 		props: { data: ctx.data, legends: ctx.legends },
@@ -309,9 +309,13 @@ function create_fragment(ctx) {
 		c: function create() {
 			h1 = element("h1");
 			h1.textContent = "Svelte diagrams";
-			t_1 = space();
+			t1 = space();
+			h2 = element("h2");
+			h2.textContent = "Browser usage";
+			t3 = space();
 			piechart.$$.fragment.c();
-			add_location(h1, file, 25, 0, 417);
+			add_location(h1, file, 33, 0, 599);
+			add_location(h2, file, 35, 0, 627);
 		},
 
 		l: function claim(nodes) {
@@ -320,7 +324,9 @@ function create_fragment(ctx) {
 
 		m: function mount(target, anchor) {
 			insert(target, h1, anchor);
-			insert(target, t_1, anchor);
+			insert(target, t1, anchor);
+			insert(target, h2, anchor);
+			insert(target, t3, anchor);
 			mount_component(piechart, target, anchor);
 			current = true;
 		},
@@ -347,7 +353,9 @@ function create_fragment(ctx) {
 		d: function destroy(detaching) {
 			if (detaching) {
 				detach(h1);
-				detach(t_1);
+				detach(t1);
+				detach(h2);
+				detach(t3);
 			}
 
 			destroy_component(piechart, detaching);
@@ -358,24 +366,32 @@ function create_fragment(ctx) {
 function instance($$self) {
 	
 
-  let data = [8, 9, 2, 12];
+  let data = [63.37, 15.05, 4.49, 3.75, 3.57, 2.58];
   let legends = [
     {
+      title: 'Chrome',
+      color: '#ffc107',
+    },
+    {
       title: 'Safari',
-      color: 'blue'
+      color: '#29b6f6',
     },
     {
       title: 'Firefox',
-      color: 'orange'
+      color: '#ff5722',
     },
     {
-      title: 'Edge',
-      color: 'lightblue'
-    },{
-      title: 'Chrome',
-      color: 'red'
+      title: 'Samsung Internet',
+      color: '#ab47bc',
     },
-
+    {
+      title: 'UC Browser',
+      color: '#fff176',
+    },
+    {
+      title: 'Opera',
+      color: '#d32f2f',
+    },
   ];
 
 	return { data, legends };
